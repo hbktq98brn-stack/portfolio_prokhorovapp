@@ -265,42 +265,59 @@ section .section-head{margin-top:0}
 /* ============================================================
    NEW: BOOKS
    ============================================================ */
-.books-grid{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:42px;box-shadow:var(--shadow-xs);position:relative;overflow:hidden}
-.books-grid::before{content:"";position:absolute;top:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle, rgba(124,58,237,.10), transparent 70%);border-radius:50%;pointer-events:none}
+.books-grid{
+  display: grid;
+  grid-template-columns: 360px 1fr;   /* фиксированная колонка под обложку — 360px */
+  gap: 48px;
+  align-items: start;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 42px;
+  box-shadow: var(--shadow-xs);
+  position: relative;
+  overflow: hidden;
+}
+  @media(max-width: 900px){
+  .books-grid{
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 28px 22px;
+  }
+  .book-cover{
+    max-width: 280px;
+  }
+}
+  .books-grid::before{content:"";position:absolute;top:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle, rgba(124,58,237,.10), transparent 70%);border-radius:50%;pointer-events:none}
 .books-grid::after{content:"";position:absolute;bottom:-120px;left:-80px;width:320px;height:320px;background:radial-gradient(circle, rgba(6,182,212,.10), transparent 70%);border-radius:50%;pointer-events:none}
 @media(max-width:900px){.books-grid{grid-template-columns:1fr;gap:30px;padding:28px 22px}}
 .book-cover{
-  width:100%;
-  max-width:240px;
-  /* Реальное соотношение обложки — обычно 2:3 (0.667). 
-     Если ваша обложка чуть уже/шире, подберите: 5/8, 3/5, 8/13 */
-  aspect-ratio: 2 / 3;
-  border-radius:14px;
-  background:#fff;
-  border:1px solid #e6ebf3;
-  display:grid;
-  place-items:center;
-  position:relative;
-  overflow:hidden;
-  box-shadow:0 20px 40px -18px rgba(37,99,235,.35),
-             0 8px 16px -10px rgba(124,58,237,.25);
-  flex-shrink:0;
-  margin:0 auto;
+  width: 100%;
+  max-width: 340px;       /* было 240px — увеличили, обложка станет крупной */
+  aspect-ratio: 9 / 16;   /* под вашу обложку; если чуть растянется — попробуйте 10/17 или 3/5 */
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #e6ebf3;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -18px rgba(37,99,235,.35),
+              0 8px 16px -10px rgba(124,58,237,.25);
+  flex-shrink: 0;
+  margin: 0 auto;
 }
   @media(max-width:900px){.book-cover{width:100%;max-width:227px}}
 .book-cover img{
-  width:100%;
-  height:100%;
-  /* contain — вся обложка видна без обрезки. 
-     Если хотите заполнить рамку целиком и допускаете лёгкую обрезку полей — 
-     замените на cover */
-  object-fit:contain;
-  display:block;
-  position:absolute;
-  inset:0;
-  z-index:2;
-  border-radius:13px;
-  background:#fff;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* вся обложка видна целиком, без обрезки */
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 13px;
+  background: #fff;
 }
   .book-cover-placeholder{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:20px;position:relative;z-index:1}
 .book-cover-placeholder .icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#2563eb,#7c3aed);display:grid;place-items:center;color:#fff;font-size:26px;box-shadow:0 10px 22px -10px rgba(37,99,235,.6)}
