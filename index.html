@@ -47,6 +47,7 @@ button{font-family:inherit}
 .nav-links a:hover{background:var(--primary-soft);color:var(--primary)}
 .nav-cta{font-size:13px;font-weight:600;padding:9px 16px;border-radius:10px;background:var(--text);color:#fff;transition:all .2s;border:none;cursor:pointer}
 .nav-cta:hover{background:var(--primary);transform:translateY(-1px);box-shadow:0 8px 20px -8px rgba(37,99,235,.6)}
+@media(max-width:980px){.nav-links a{padding:8px 10px;font-size:13px}}
 @media(max-width:860px){.nav-links{display:none}}
 
 /* ---------- HERO ---------- */
@@ -63,24 +64,14 @@ button{font-family:inherit}
 .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--emerald);box-shadow:0 0 0 4px rgba(16,185,129,.18);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(16,185,129,.18)}50%{box-shadow:0 0 0 8px rgba(16,185,129,.05)}}
 
-/* HERO PHOTO */
-.hero-photo{
-  width:150px;height:150px;border-radius:50%;margin:0 auto 24px;
-  padding:5px;background:linear-gradient(135deg,#2563eb 0%,#7c3aed 50%,#06b6d4 100%);
-  box-shadow:0 20px 40px -18px rgba(37,99,235,.55), 0 8px 20px -10px rgba(124,58,237,.35);
-  position:relative;
-}
+.hero-photo{width:150px;height:150px;border-radius:50%;margin:0 auto 24px;padding:5px;background:linear-gradient(135deg,#2563eb 0%,#7c3aed 50%,#06b6d4 100%);box-shadow:0 20px 40px -18px rgba(37,99,235,.55), 0 8px 20px -10px rgba(124,58,237,.35);position:relative}
 .hero-photo-inner{width:100%;height:100%;border-radius:50%;overflow:hidden;background:#fff;display:grid;place-items:center}
 .hero-photo-inner img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-photo-inner .placeholder{font-family:'Manrope';font-weight:800;font-size:38px;letter-spacing:-.03em;background:linear-gradient(135deg,#2563eb,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 .hero h1{font-size:clamp(20px,2.6vw,30px);letter-spacing:-.02em;margin-bottom:16px;line-height:1.35;font-weight:800}
 .hero h1 .grad{background:linear-gradient(120deg,#2563eb 0%,#7c3aed 50%,#06b6d4 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero h1 .hl-violet{
-  background:linear-gradient(120deg,#7c3aed,#e11d48);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  font-weight:800;
-}
+.hero h1 .hl-violet{background:linear-gradient(120deg,#7c3aed,#e11d48);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
 .hero-sub{font-size:15.5px;color:var(--text-2);max-width:640px;margin:0 auto 32px;line-height:1.7}
 .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
 .btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;padding:14px 22px;border-radius:13px;transition:all .25s cubic-bezier(.2,.8,.2,1);cursor:pointer;border:none}
@@ -97,7 +88,6 @@ button{font-family:inherit}
 .stat .lbl{font-size:12.5px;color:var(--muted);margin-top:8px;font-weight:500}
 @media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
 
-/* ---------- SECTIONS ---------- */
 section{padding:var(--section-gap) 0;position:relative}
 section .section-head{margin-top:0}
 .section-head{max-width:720px;margin-bottom:22px}
@@ -125,70 +115,42 @@ section .section-head{margin-top:0}
 .tool{display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--bg);border-radius:12px;border:1px solid var(--line-2);font-size:13.5px;font-weight:600;color:var(--text-2)}
 .tool .ico{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font-size:11px;color:#fff;flex-shrink:0;font-weight:700}
 
-/* ---------- PROJECTS (ACCORDION) ---------- */
+/* ---------- PROJECTS ---------- */
 .projects-wrap{display:flex;flex-direction:column;gap:20px}
 .project{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-xs);transition:box-shadow .35s, border-color .35s}
 .project:hover{box-shadow:var(--shadow)}
 .project.open{border-color:rgba(37,99,235,.25);box-shadow:var(--shadow)}
-.project-header{
-  width:100%;background:transparent;border:none;padding:26px 32px;
-  text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;
-  transition:background .2s;position:relative;
-}
+.project-header{width:100%;background:transparent;border:none;padding:26px 32px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;transition:background .2s;position:relative}
 .project-header::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--c1),var(--c2))}
 .project-header:hover{background:linear-gradient(180deg,rgba(248,250,252,.6),transparent)}
 .project-head-main{flex:1;min-width:0}
-.project-num{
-  display:inline-flex;align-items:center;gap:6px;
-  font-family:'Manrope';font-weight:800;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--c1);margin-bottom:10px;padding:5px 10px;border-radius:7px;
-  background:color-mix(in srgb, var(--c1) 8%, transparent);
-  border:1px solid color-mix(in srgb, var(--c1) 20%, transparent);
-}
+.project-num{display:inline-flex;align-items:center;gap:6px;font-family:'Manrope';font-weight:800;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--c1);margin-bottom:10px;padding:5px 10px;border-radius:7px;background:color-mix(in srgb, var(--c1) 8%, transparent);border:1px solid color-mix(in srgb, var(--c1) 20%, transparent)}
 .project-title{font-size:clamp(17px,1.9vw,21px);letter-spacing:-.02em;margin-bottom:14px;color:var(--text);font-family:'Manrope';font-weight:800;line-height:1.3}
 .project-meta{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-size:11px;font-weight:600;padding:4px 9px;border-radius:7px;background:var(--bg);color:var(--text-2);border:1px solid var(--line)}
-.expand-btn{
-  width:40px;height:40px;border-radius:50%;flex-shrink:0;
-  background:var(--bg);border:1px solid var(--line);
-  display:grid;place-items:center;color:var(--text-2);
-  font-size:22px;font-weight:300;line-height:1;
-  transition:all .3s cubic-bezier(.2,.8,.2,1);
-}
+.expand-btn{width:40px;height:40px;border-radius:50%;flex-shrink:0;background:var(--bg);border:1px solid var(--line);display:grid;place-items:center;color:var(--text-2);font-size:22px;font-weight:300;line-height:1;transition:all .3s cubic-bezier(.2,.8,.2,1)}
 .project.open .expand-btn{transform:rotate(45deg);background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;border-color:transparent}
-
 .project-content-wrap{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)}
 .project.open .project-content-wrap{grid-template-rows:1fr}
 .project-content{overflow:hidden}
 .project-body{padding:26px 32px 32px;border-top:1px solid var(--line-2)}
 
-/* Tab plates */
 .tab-plates{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:24px}
 @media(max-width:760px){.tab-plates{grid-template-columns:1fr}}
-.tab-plate{
-  background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;
-  text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:5px;
-  transition:all .25s;position:relative;overflow:hidden;
-}
+.tab-plate{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:5px;transition:all .25s;position:relative;overflow:hidden}
 .tab-plate:hover{border-color:color-mix(in srgb, var(--c1) 45%, transparent);transform:translateY(-2px);box-shadow:0 10px 24px -14px rgba(11,18,32,.18)}
-.tab-plate.active{
-  background:linear-gradient(135deg,color-mix(in srgb, var(--c1) 6%, #fff),color-mix(in srgb, var(--c2) 6%, #fff));
-  border-color:color-mix(in srgb, var(--c1) 50%, transparent);
-  box-shadow:0 8px 20px -12px color-mix(in srgb, var(--c1) 45%, transparent);
-}
+.tab-plate.active{background:linear-gradient(135deg,color-mix(in srgb, var(--c1) 6%, #fff),color-mix(in srgb, var(--c2) 6%, #fff));border-color:color-mix(in srgb, var(--c1) 50%, transparent);box-shadow:0 8px 20px -12px color-mix(in srgb, var(--c1) 45%, transparent)}
 .tab-plate.active::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2))}
 .tp-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:15px;background:color-mix(in srgb, var(--c1) 10%, transparent);color:var(--c1);margin-bottom:6px}
 .tab-plate.active .tp-icon{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff}
 .tp-label{font-family:'Manrope';font-weight:700;font-size:14px;color:var(--text)}
 .tp-hint{font-size:11.5px;color:var(--muted);font-weight:500}
 
-/* Tab panels */
 .tab-panels{position:relative}
 .tab-panel{display:none;animation:fadeIn .35s ease}
 .tab-panel.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
-/* Project description */
 .project-desc{color:var(--text-2);font-size:15px;line-height:1.75;margin-bottom:24px;max-width:920px}
 .project-desc p{margin-bottom:12px}
 .project-desc p:last-child{margin-bottom:0}
@@ -196,13 +158,11 @@ section .section-head{margin-top:0}
 .highlight.blue{background:linear-gradient(180deg,transparent 58%,#bfdbfe 58%)}
 .highlight.green{background:linear-gradient(180deg,transparent 58%,#bbf7d0 58%)}
 
-/* Metrics */
 .metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:24px}
 .metric{padding:16px 18px;border-radius:14px;background:var(--bg);border:1px solid var(--line-2)}
 .metric .v{font-family:'Manrope';font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--text);line-height:1.1}
 .metric .k{font-size:12px;color:var(--muted);margin-top:5px;font-weight:500;line-height:1.35}
 
-/* Charts */
 .charts{display:grid;gap:16px}
 .charts.two{grid-template-columns:1fr 1fr}
 @media(max-width:900px){.charts.two{grid-template-columns:1fr}}
@@ -211,7 +171,6 @@ section .section-head{margin-top:0}
 .chart-wrap{position:relative;height:240px}
 .chart-wrap.tall{height:300px}
 
-/* Portraits */
 .portraits{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
 @media(max-width:760px){.portraits{grid-template-columns:1fr}}
 .portrait{border:1px solid var(--line);border-radius:16px;padding:22px;background:#fff;position:relative;overflow:hidden}
@@ -227,7 +186,6 @@ section .section-head{margin-top:0}
 .portrait .tag-mini.yes{background:#e5faf3;border-color:#a7f3d0;color:#047857}
 .portrait .tag-mini.no{background:#ffe8ee;border-color:#fecdd3;color:#be123c}
 
-/* Insights */
 .insights{padding:22px 24px;border-radius:16px;background:linear-gradient(135deg,#f8fafc,#eef4ff);border:1px solid #dbeafe;margin-bottom:24px}
 .insights:last-child{margin-bottom:0}
 .insights h4{font-size:14.5px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;color:var(--primary)}
@@ -235,7 +193,6 @@ section .section-head{margin-top:0}
 .insights li{position:relative;padding-left:22px;font-size:14px;color:var(--text-2);line-height:1.6}
 .insights li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 3px rgba(37,99,235,.15)}
 
-/* Survey */
 .surveys-title{font-size:14.5px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px;color:var(--text)}
 .surveys-title .diamond{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;font-size:11px}
 .surveys-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-bottom:24px}
@@ -270,6 +227,65 @@ section .section-head{margin-top:0}
 .tools-block{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;box-shadow:var(--shadow-xs)}
 .tools-block h3{font-family:'Manrope';font-size:17px;font-weight:700;margin-bottom:18px;color:var(--text)}
 .tools-block .tools{margin-top:0}
+
+/* ============================================================
+   NEW: PUBLICATIONS
+   ============================================================ */
+.publications-wrap{display:flex;flex-direction:column;gap:16px}
+.pub-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-xs);transition:box-shadow .3s, border-color .3s, transform .3s;position:relative}
+.pub-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--c1),var(--c2))}
+.pub-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.pub-card.open{border-color:color-mix(in srgb, var(--c1) 30%, transparent);box-shadow:var(--shadow)}
+.pub-header{padding:24px 28px;display:flex;gap:20px;align-items:flex-start}
+@media(max-width:700px){.pub-header{padding:20px 20px 20px;flex-wrap:wrap;gap:14px}}
+.pub-num{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;display:grid;place-items:center;font-family:'Manrope';font-weight:800;font-size:18px;flex-shrink:0;box-shadow:0 8px 18px -10px color-mix(in srgb, var(--c1) 60%, transparent)}
+.pub-main{flex:1;min-width:0}
+.pub-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.pub-year{font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:7px;background:color-mix(in srgb, var(--c1) 8%, transparent);color:var(--c1);border:1px solid color-mix(in srgb, var(--c1) 22%, transparent);letter-spacing:.03em}
+.pub-authors{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:7px;background:var(--bg);color:var(--text-2);border:1px solid var(--line)}
+.pub-title{font-family:'Manrope';font-weight:800;font-size:16.5px;line-height:1.35;color:var(--text);letter-spacing:-.015em;margin-bottom:6px}
+.pub-title a{background:linear-gradient(120deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;color:transparent;transition:opacity .2s;display:inline}
+.pub-title a:hover{opacity:.75}
+.pub-title a .ext{font-size:13px;opacity:.7;-webkit-text-fill-color:currentColor;color:var(--c1);display:inline-block;margin-left:2px}
+.pub-subtitle{font-size:12.5px;color:var(--muted);font-weight:500}
+.pub-toggle{background:transparent;border:1px solid var(--line);padding:9px 14px;border-radius:10px;font-size:12.5px;font-weight:600;color:var(--text-2);cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all .25s;white-space:nowrap;flex-shrink:0;margin-top:6px}
+.pub-toggle:hover{border-color:var(--c1);color:var(--c1);background:color-mix(in srgb, var(--c1) 5%, transparent)}
+.pub-toggle .arrow{transition:transform .35s cubic-bezier(.2,.8,.2,1);font-size:10px}
+.pub-card.open .pub-toggle{background:linear-gradient(135deg,var(--c1),var(--c2));color:#fff;border-color:transparent}
+.pub-card.open .pub-toggle .arrow{transform:rotate(180deg)}
+@media(max-width:700px){.pub-toggle{width:100%;justify-content:center}}
+.pub-desc-wrap{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)}
+.pub-card.open .pub-desc-wrap{grid-template-rows:1fr}
+.pub-desc-inner{overflow:hidden}
+.pub-desc{padding:20px 28px 26px;font-size:14px;line-height:1.75;color:var(--text-2);border-top:1px solid var(--line-2);margin:0 28px 0;padding-left:0;padding-right:0}
+@media(max-width:700px){.pub-desc{margin:0 20px}}
+.pub-desc p{margin-bottom:10px}
+.pub-desc p:last-child{margin-bottom:0}
+
+/* ============================================================
+   NEW: BOOKS
+   ============================================================ */
+.books-grid{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:42px;box-shadow:var(--shadow-xs);position:relative;overflow:hidden}
+.books-grid::before{content:"";position:absolute;top:-100px;right:-100px;width:340px;height:340px;background:radial-gradient(circle, rgba(124,58,237,.10), transparent 70%);border-radius:50%;pointer-events:none}
+.books-grid::after{content:"";position:absolute;bottom:-120px;left:-80px;width:320px;height:320px;background:radial-gradient(circle, rgba(6,182,212,.10), transparent 70%);border-radius:50%;pointer-events:none}
+@media(max-width:900px){.books-grid{grid-template-columns:1fr;gap:30px;padding:28px 22px}}
+.book-cover{width:227px;aspect-ratio:6 / 15;border-radius:14px;background:linear-gradient(135deg,#eef4ff,#f5f0ff);border:2px dashed #c7d2fe;display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 20px 40px -18px rgba(37,99,235,.35), 0 8px 16px -10px rgba(124,58,237,.25);flex-shrink:0;margin:0 auto}
+@media(max-width:900px){.book-cover{width:100%;max-width:227px}}
+.book-cover img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;z-index:2;border-radius:12px}
+.book-cover-placeholder{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:20px;position:relative;z-index:1}
+.book-cover-placeholder .icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#2563eb,#7c3aed);display:grid;place-items:center;color:#fff;font-size:26px;box-shadow:0 10px 22px -10px rgba(37,99,235,.6)}
+.book-cover-placeholder .label{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);line-height:1.4}
+.book-cover-placeholder .size{font-size:11px;color:var(--muted);font-family:'Manrope';font-weight:600;padding:4px 10px;border-radius:100px;background:rgba(255,255,255,.75);border:1px solid #e0e7ff}
+.book-info{position:relative;z-index:1}
+.book-tagline{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;color:var(--violet);background:rgba(124,58,237,.08);border:1px solid rgba(124,58,237,.22);padding:6px 12px;border-radius:100px;margin-bottom:16px;letter-spacing:.08em;text-transform:uppercase}
+.book-info h3{font-family:'Manrope';font-size:clamp(20px,2.2vw,26px);font-weight:800;letter-spacing:-.025em;line-height:1.3;color:var(--text);margin-bottom:18px}
+.book-desc{font-size:15px;line-height:1.75;color:var(--text-2);margin-bottom:16px}
+.book-desc p{margin-bottom:12px}
+.book-desc p:last-child{margin-bottom:0}
+.book-desc strong{color:var(--text);font-weight:700;background:linear-gradient(180deg,transparent 62%,#fef08a 62%);padding:0 2px;border-radius:3px}
+.book-highlights{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.book-highlight{font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:100px;background:var(--bg);border:1px solid var(--line);color:var(--text-2);transition:all .2s}
+.book-highlight:hover{border-color:var(--violet);color:var(--violet);background:rgba(124,58,237,.06)}
 
 /* ---------- FOOTER ---------- */
 .footer{background:#0b1220;color:#e2e8f0;padding:60px 0 26px;position:relative;overflow:hidden}
@@ -306,7 +322,6 @@ section .section-head{margin-top:0}
 .contact-item .ci-arrow{color:var(--muted);font-size:16px;transition:transform .25s}
 .contact-item:hover .ci-arrow{color:var(--primary);transform:translateX(3px)}
 
-/* ---------- ANIMATIONS ---------- */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1)}
 .reveal.in{opacity:1;transform:none}
 
@@ -323,7 +338,6 @@ section .section-head{margin-top:0}
   <div class="nav-inner">
     <a href="#" class="brand">
       <div class="brand-avatar">
-        <!-- ФОТО: ЗАМЕНИТЕ "photo.jpg" -->
         <img src="C9FFD587-B19C-4F19-BC04-3869F3C6DBF0.jpeg" alt="Прохоров Алексей Павлович" onerror="this.style.display='none';this.parentNode.innerHTML='<span>АП</span>';" />
       </div>
       <div>
@@ -335,6 +349,8 @@ section .section-head{margin-top:0}
       <a href="#about">О себе</a>
       <a href="#projects">Проекты</a>
       <a href="#method">Методология</a>
+      <a href="#publications">Публикации</a>
+      <a href="#books">Книги</a>
       <a href="#contact">Контакты</a>
     </div>
     <button class="nav-cta" onclick="openContact()">Связаться →</button>
@@ -351,7 +367,6 @@ section .section-head{margin-top:0}
   <div class="container hero-inner">
     <div class="badge"><span class="dot"></span>Открыт к сотрудничеству</div>
 
-    <!-- ФОТО: ЗАМЕНИТЕ "photo.jpg" НА ПУТЬ К ВАШЕМУ ФОТО -->
     <div class="hero-photo">
       <div class="hero-photo-inner">
         <img src="C9FFD587-B19C-4F19-BC04-3869F3C6DBF0.jpeg" alt="Прохоров Алексей Павлович" onerror="this.style.display='none';this.parentNode.innerHTML='<span class=&quot;placeholder&quot;>АП</span>';" />
@@ -490,8 +505,6 @@ section .section-head{margin-top:0}
                     <div class="metric"><div class="v">3</div><div class="k">федеральных закона</div></div>
                     <div class="metric"><div class="v">46</div><div class="k">методических документов</div></div>
                     <div class="metric"><div class="v">14</div><div class="k">годовых отчетов госорганов</div></div>
-
-
                   </div>
                 </div>
 
@@ -636,7 +649,6 @@ section .section-head{margin-top:0}
                   <div style="margin-top:24px">
                     <div class="surveys-title"><span class="diamond">◆</span>Дополнительные направления исследования</div>
                     <div class="surveys-grid">
-
                       <div class="survey" style="--c1:#7c3aed;--c2:#2563eb">
                         <div class="survey-head">
                           <div class="survey-title">Внутренний опрос сотрудников «Северстали»</div>
@@ -648,21 +660,9 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Как вы оцениваете влияние цифровизации и участия в нацпроектах на работу вашего подразделения?»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Положительно</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:58%;background:linear-gradient(90deg,#7c3aed,#2563eb)"></div></div>
-                            <span class="bar-val">58%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Нейтрально</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:27%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div>
-                            <span class="bar-val">27%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Отрицательно</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:15%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div>
-                            <span class="bar-val">15%</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Положительно</span><div class="bar-track"><div class="bar-fill" style="width:58%;background:linear-gradient(90deg,#7c3aed,#2563eb)"></div></div><span class="bar-val">58%</span></div>
+                          <div class="bar-row"><span class="bar-label">Нейтрально</span><div class="bar-track"><div class="bar-fill" style="width:27%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div><span class="bar-val">27%</span></div>
+                          <div class="bar-row"><span class="bar-label">Отрицательно</span><div class="bar-track"><div class="bar-fill" style="width:15%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">15%</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> большинство сотрудников поддерживают цифровую трансформацию, но отмечают дефицит компетенций и необходимость дополнительного обучения — это барьер для ускорения.</div>
                       </div>
@@ -678,21 +678,9 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Насколько стратегия «Северстали» опережает отраслевые практики в части цифровизации?»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Опережает</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:54%;background:linear-gradient(90deg,#2563eb,#06b6d4)"></div></div>
-                            <span class="bar-val">54%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">На уровне</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:33%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div>
-                            <span class="bar-val">33%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Отстаёт</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:13%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div>
-                            <span class="bar-val">13%</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Опережает</span><div class="bar-track"><div class="bar-fill" style="width:54%;background:linear-gradient(90deg,#2563eb,#06b6d4)"></div></div><span class="bar-val">54%</span></div>
+                          <div class="bar-row"><span class="bar-label">На уровне</span><div class="bar-track"><div class="bar-fill" style="width:33%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div><span class="bar-val">33%</span></div>
+                          <div class="bar-row"><span class="bar-label">Отстаёт</span><div class="bar-track"><div class="bar-fill" style="width:13%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">13%</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> более половины экспертов считают «Северсталь» лидером цифровой трансформации в отрасли; респонденты отмечают активное использование инструментов нацпроектов.</div>
                       </div>
@@ -708,25 +696,12 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Какие нацпроекты оказывают наибольшее влияние на металлургию?»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Цифровая экономика</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:74%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div>
-                            <span class="bar-val">74%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Производительность труда</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:61%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div>
-                            <span class="bar-val">61%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Новые материалы и химия</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:43%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div>
-                            <span class="bar-val">43%</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Цифровая экономика</span><div class="bar-track"><div class="bar-fill" style="width:74%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">74%</span></div>
+                          <div class="bar-row"><span class="bar-label">Производительность труда</span><div class="bar-track"><div class="bar-fill" style="width:61%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">61%</span></div>
+                          <div class="bar-row"><span class="bar-label">Новые материалы и химия</span><div class="bar-track"><div class="bar-fill" style="width:43%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">43%</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> аналитики выделяют «Цифровую экономику» как ключевой драйвер отрасли; влияние «Новых материалов» пока ощутимо меньше ожидаемого.</div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -820,7 +795,6 @@ section .section-head{margin-top:0}
                   <div style="margin-top:24px">
                     <div class="surveys-title"><span class="diamond">◆</span>Дополнительные социологические исследования</div>
                     <div class="surveys-grid">
-
                       <div class="survey" style="--c1:#e11d48;--c2:#f59e0b">
                         <div class="survey-head">
                           <div class="survey-title">Отношение жителей МО к работе Главгосстройнадзора</div>
@@ -832,21 +806,9 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Как вы оцениваете работу Главгосстройнадзора Московской области в сфере защиты прав дольщиков?»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Положительно</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:42%;background:linear-gradient(90deg,#10b981,#06b6d4)"></div></div>
-                            <span class="bar-val">42%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Нейтрально</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:31%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div>
-                            <span class="bar-val">31%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Отрицательно</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:27%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div>
-                            <span class="bar-val">27%</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Положительно</span><div class="bar-track"><div class="bar-fill" style="width:42%;background:linear-gradient(90deg,#10b981,#06b6d4)"></div></div><span class="bar-val">42%</span></div>
+                          <div class="bar-row"><span class="bar-label">Нейтрально</span><div class="bar-track"><div class="bar-fill" style="width:31%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div><span class="bar-val">31%</span></div>
+                          <div class="bar-row"><span class="bar-label">Отрицательно</span><div class="bar-track"><div class="bar-fill" style="width:27%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">27%</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> относительное большинство жителей МО позитивно оценивают работу надзорного органа, однако более четверти — критично; основной запрос — прозрачность коммуникации по проблемным объектам.</div>
                       </div>
@@ -861,26 +823,10 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Структура обращений граждан по объектам долевого строительства МО (по категориям)»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Нарушение сроков</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:44%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div>
-                            <span class="bar-val">44%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Качество работ</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div>
-                            <span class="bar-val">28%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Коммуникация</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:17%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div>
-                            <span class="bar-val">17%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Прочее</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:11%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div>
-                            <span class="bar-val">11%</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Нарушение сроков</span><div class="bar-track"><div class="bar-fill" style="width:44%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div><span class="bar-val">44%</span></div>
+                          <div class="bar-row"><span class="bar-label">Качество работ</span><div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div><span class="bar-val">28%</span></div>
+                          <div class="bar-row"><span class="bar-label">Коммуникация</span><div class="bar-track"><div class="bar-fill" style="width:17%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div><span class="bar-val">17%</span></div>
+                          <div class="bar-row"><span class="bar-label">Прочее</span><div class="bar-track"><div class="bar-fill" style="width:11%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div><span class="bar-val">11%</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> главная причина обращений — нарушение сроков передачи; работа с качеством и коммуникацией — вторая и третья по значимости зоны для улучшения.</div>
                       </div>
@@ -896,25 +842,12 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Какие барьеры наиболее сильно влияют на соблюдение сроков ввода объектов?»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Дефицит рабочей силы</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:73%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div>
-                            <span class="bar-val">73%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Стоимость материалов</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:60%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div>
-                            <span class="bar-val">60%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Смена подрядчиков</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:47%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div>
-                            <span class="bar-val">47%</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Дефицит рабочей силы</span><div class="bar-track"><div class="bar-fill" style="width:73%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div><span class="bar-val">73%</span></div>
+                          <div class="bar-row"><span class="bar-label">Стоимость материалов</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div><span class="bar-val">60%</span></div>
+                          <div class="bar-row"><span class="bar-label">Смена подрядчиков</span><div class="bar-track"><div class="bar-fill" style="width:47%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div><span class="bar-val">47%</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> застройщики указывают на дефицит рабочей силы как ключевой барьер; в связке с ростом стоимости материалов это формирует основной риск переноса сроков.</div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -1009,7 +942,6 @@ section .section-head{margin-top:0}
                   <div style="margin-top:24px">
                     <div class="surveys-title"><span class="diamond">◆</span>Дополнительные социологические исследования</div>
                     <div class="surveys-grid">
-
                       <div class="survey" style="--c1:#06b6d4;--c2:#10b981">
                         <div class="survey-head">
                           <div class="survey-title">Информированность жителей МО о нацпроекте</div>
@@ -1021,21 +953,9 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Насколько вы осведомлены о нацпроекте «Жильё и городская среда» и его мероприятиях в Московской области?»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Хорошо знаю</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:38%;background:linear-gradient(90deg,#06b6d4,#10b981)"></div></div>
-                            <span class="bar-val">38%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Слышал(а)</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:44%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div>
-                            <span class="bar-val">44%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Не знаю</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:18%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div>
-                            <span class="bar-val">18%</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Хорошо знаю</span><div class="bar-track"><div class="bar-fill" style="width:38%;background:linear-gradient(90deg,#06b6d4,#10b981)"></div></div><span class="bar-val">38%</span></div>
+                          <div class="bar-row"><span class="bar-label">Слышал(а)</span><div class="bar-track"><div class="bar-fill" style="width:44%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div><span class="bar-val">44%</span></div>
+                          <div class="bar-row"><span class="bar-label">Не знаю</span><div class="bar-track"><div class="bar-fill" style="width:18%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">18%</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> уровень базовой информированности высокий (82%), но только 38% знают о нацпроекте содержательно — есть потенциал для усиления коммуникации.</div>
                       </div>
@@ -1051,21 +971,9 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Насколько вы удовлетворены качеством реализации программы и сроками?»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Удовлетворены</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:56%;background:linear-gradient(90deg,#10b981,#06b6d4)"></div></div>
-                            <span class="bar-val">56%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Частично</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div>
-                            <span class="bar-val">28%</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Не удовлетворены</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:16%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div>
-                            <span class="bar-val">16%</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Удовлетворены</span><div class="bar-track"><div class="bar-fill" style="width:56%;background:linear-gradient(90deg,#10b981,#06b6d4)"></div></div><span class="bar-val">56%</span></div>
+                          <div class="bar-row"><span class="bar-label">Частично</span><div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div><span class="bar-val">28%</span></div>
+                          <div class="bar-row"><span class="bar-label">Не удовлетворены</span><div class="bar-track"><div class="bar-fill" style="width:16%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">16%</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> более половины получателей оценивают программу положительно; основные замечания касаются сроков и прозрачности процедур.</div>
                       </div>
@@ -1081,32 +989,19 @@ section .section-head{margin-top:0}
                         </div>
                         <div class="survey-question">«Оцените по 10-балльной шкале ключевые параметры работы надзорного органа»</div>
                         <div class="survey-bars">
-                          <div class="bar-row">
-                            <span class="bar-label">Открытость</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:72%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div>
-                            <span class="bar-val">7.2</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Скорость реакции</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:76%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div>
-                            <span class="bar-val">7.6</span>
-                          </div>
-                          <div class="bar-row">
-                            <span class="bar-label">Эффективность мер поддержки</span>
-                            <div class="bar-track"><div class="bar-fill" style="width:68%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div>
-                            <span class="bar-val">6.8</span>
-                          </div>
+                          <div class="bar-row"><span class="bar-label">Открытость</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div><span class="bar-val">7.2</span></div>
+                          <div class="bar-row"><span class="bar-label">Скорость реакции</span><div class="bar-track"><div class="bar-fill" style="width:76%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div><span class="bar-val">7.6</span></div>
+                          <div class="bar-row"><span class="bar-label">Эффективность мер поддержки</span><div class="bar-track"><div class="bar-fill" style="width:68%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div><span class="bar-val">6.8</span></div>
                         </div>
                         <div class="survey-finding"><strong>Ключевой вывод:</strong> эксперты высоко оценивают оперативность и открытость; наиболее низкая оценка — у эффективности мер поддержки застройщиков, что указывает на зону для совершенствования.</div>
                       </div>
-
                     </div>
                   </div>
                 </div>
 
                 <div class="tab-panel" data-panel="conclusions">
                   <div class="insights">
-                    <h4></h4>Ключевые выводы</h4>
+                    <h4>Ключевые выводы</h4>
                     <ul>
                       <li>Московская область — один из лидеров по вводу жилья в РФ: 9.3 млн м² в 2024 году, ~11% общероссийского ввода. Однако наблюдается снижение темпов (–9% к 2023 г.).</li>
                       <li>Соотношение распроданности к стройготовности в МО (75% в 2025 г.) ниже, чем в Москве (95%), что указывает на риск насыщения рынка.</li>
@@ -1165,6 +1060,188 @@ section .section-head{margin-top:0}
   </div>
 </section>
 
+<!-- ============================================================
+     NEW: PUBLICATIONS
+     ============================================================ -->
+<section id="publications">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Публикации</div>
+    </div>
+
+    <div class="publications-wrap">
+
+      <!-- PUBLICATION 1 -->
+      <article class="pub-card reveal" style="--c1:#2563eb;--c2:#7c3aed">
+        <div class="pub-header">
+          <div class="pub-num">01</div>
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="pub-year">2023</span>
+              <span class="pub-authors">Прохоров А.П.</span>
+            </div>
+            <div class="pub-title">
+              <a href="https://economics.ihbt.ifmo.ru/ru/article/22475/strategicheskoe_stanovlenie_razvivayuschihsya_otrasley_promyshlennosti_rossiyskoy_federacii_s_uchetom_cifrovoy_transformacii,_opredelyayuschey_novuyu_model_ekonomicheskogo_razvitiya.htm" target="_blank" rel="noopener">Стратегическое становление развивающихся отраслей промышленности Российской Федерации с учётом цифровой трансформации, определяющей новую модель экономического развития<span class="ext">↗</span></a>
+            </div>
+            <div class="pub-subtitle">Научная статья · Экономика и управление</div>
+          </div>
+          <button class="pub-toggle" onclick="togglePub(this)" aria-expanded="false">
+            <span class="toggle-text">Аннотация</span>
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="pub-desc-wrap">
+          <div class="pub-desc-inner">
+            <div class="pub-desc">
+              <p>Рассмотрены аспекты развития стратегических развивающихся отраслей Российской Федерации с учетом цифровой трансформации. Определено, что новый виток научно-технической революции открыл большие возможности для промышленной трансформации и стал новой движущей силой развития национальной экономики. В процессе содействия качественному развитию стратегических развивающихся отраслей цифровая экономика играет важную роль.</p>
+              <p>Целью работы является анализ стратегических развивающихся отраслей в условиях возросшей неопределенности во внешней среде, а также серьезной конкуренции за гомогенизацию промышленности между регионами. В качестве объекта исследования выступила новая модель экономического развития Российской Федерации, предложенная Президентом В.В. Путиным, которая исследовалась с применением метода экономического эксперимента.</p>
+              <p>Управляемые инновациями элементы данных играют каталитическую роль, способствуют преобразованию старой и новой модели экономического развития, инновациям и развитию всей цепочки закупок, производства, продаж и обращения, а также порождают экономику новых отраслей, новых форматов и новых бизнес-моделей, интегрируют и высвобождают ценности традиционных факторов производства.</p>
+              <p>С развитием возможностей анализа данных и цифрового инклюзивного финансирования можно решить проблемы информационной асимметрии в традиционном процессе финансирования и сложного процесса кредитования, а также решить проблемы предприятий в стратегических развивающихся отраслях, особенно малых, средних и микропредприятий. Благодаря мониторингу и анализу корпоративных данных можно повысить уровень успешности корпоративных инноваций, что способствует решению проблемы ключевых технологий в промышленной цепочке, позволяя в свою очередь, повысить уровень стабильности и безопасности всей промышленной цепочки и цепочки поставок стратегических развивающихся отраслей промышленности.</p>
+              <p>Конкретный путь реализации цифровой трансформации для стимулирования высококачественного развития стратегических развивающихся отраслей заключается в ускорении создания характерных кластеров и содействии высококачественному совместному развитию между регионами. Необходимо в полной мере использовать преимущества крупных мировых стран и крупных рынков, с целью преодоления порогового значения эффекта экономии за счет масштаба и формировать дифференцированные и выгодные промышленные кластеры.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 2 -->
+      <article class="pub-card reveal" style="--c1:#06b6d4;--c2:#2563eb">
+        <div class="pub-header">
+          <div class="pub-num">02</div>
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-authors">Прохоров А.П., Кашицына Е.Г., Сарибеков Р.К.</span>
+            </div>
+            <div class="pub-title">
+              <a href="https://economics.ihbt.ifmo.ru/en/article/23237/Factors_and_conditions_of_the_new_model_of_economic_development_of_the_Russian_Federation.htm" target="_blank" rel="noopener">Факторы и условия новой модели экономического развития РФ<span class="ext">↗</span></a>
+            </div>
+            <div class="pub-subtitle">Научная статья · Пространственное развитие</div>
+          </div>
+          <button class="pub-toggle" onclick="togglePub(this)" aria-expanded="false">
+            <span class="toggle-text">Аннотация</span>
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="pub-desc-wrap">
+          <div class="pub-desc-inner">
+            <div class="pub-desc">
+              <p>Актуальность темы исследования заключается в выявлении факторов и условий обеспечения устойчивого и сбалансированного экономического развития территории Российской Федерации в современных условиях. Целью исследования является обсуждение итогов реализации модели пространственного развития страны в наступающем 2025 году, а также подготовка обновленной стратегии развития страны на период до 2030 года, с прогнозом возможных тенденций до 2036 года.</p>
+              <p>Основываясь на данных и аналитических отчетах органов государственной власти (в т.ч. субъектов РФ), теоретическом анализе принципов разработки и методологических подходах по реализации стратегии пространственного развития, в статье предлагается новая постановка задач пространственного развития РФ.</p>
+              <p>Авторами выделены новые факторы и условия, которые могут способствовать развитию и стать доминантой вырабатываемой стратегии, так и сдерживать его, что требует мер преодоления или нейтрализации негативного влияния. Результаты представленных исследований могут быть полезны при теоретической и практической разработке стратегий развития РФ в будущем.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 3 -->
+      <article class="pub-card reveal" style="--c1:#7c3aed;--c2:#e11d48">
+        <div class="pub-header">
+          <div class="pub-num">03</div>
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-authors">Прохоров А.П.</span>
+            </div>
+            <div class="pub-title">
+              <a href="https://wne.fa.ru/jour/article/view/421/540" target="_blank" rel="noopener">Prospects for the implementation of national projects of the Russian Federation for the period 2025-2030, taking into account the new model of economic development<span class="ext">↗</span></a>
+            </div>
+            <div class="pub-subtitle">Научная статья · Национальные проекты</div>
+          </div>
+          <button class="pub-toggle" onclick="togglePub(this)" aria-expanded="false">
+            <span class="toggle-text">Аннотация</span>
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="pub-desc-wrap">
+          <div class="pub-desc-inner">
+            <div class="pub-desc">
+              <p>Актуальность темы исследования обусловлена продлением реализации национальных проектов Российской Федерации (НП) с учетом новой модели экономического развития страны, предложенной Президентом Российской Федерации В.В. Путиным. Планы развития России на ближайшие годы, включая обеспечение технологического и кадрового суверенитета, развитие инфраструктуры, создание принципиально новых отраслей, требуют обоснованных стратегий и действенных механизмов реализации.</p>
+              <p>Анализ перспективных направлений (новых задач) позволит обеспечить эффективное достижение поставленных целей в соответствии с требованиями новой экономической модели и вызовами современной глобальной конъюнктуры. Целью данной статьи выступает определение перспектив и приоритетов реализации национальных проектов на период 2025-2030 гг. с учетом новой модели экономического развития Российской Федерации, ориентированной на экономику предложения.</p>
+              <p>Исследование было осуществлено с использованием актуальных данных и аналитических отчетов органов государственной власти, а также теоретического анализа основных принципов и методологических подходов к реализации национальных проектов.</p>
+              <p><strong>Научная новизна.</strong> Автором, на основе проанализированных данных, предлагается ориентировочный перечень новых (переформатированных) проектов цикла 2025-2030 гг.</p>
+              <p><strong>Результаты исследования.</strong> В статье обосновываются новые задачи, которые необходимо решить в рамках продления реализации национальных проектов. По мнению автора, нацпроекты должны быть дополнены прорывными мероприятиями, нацеленными на существенный прирост добавленной стоимости, качественный рост доходной части бюджетов всех уровней, масштабное привлечение инвестиционного ресурса, создание новых высокопроизводительных рабочих мест.</p>
+              <p><strong>Практическая значимость.</strong> Результаты и выводы статьи могут быть полезны для принимающих решения о разработке и реализации политики развития страны, для проектных офисов органов власти.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 4 -->
+      <article class="pub-card reveal" style="--c1:#f59e0b;--c2:#e11d48">
+        <div class="pub-header">
+          <div class="pub-num">04</div>
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-authors">Прохоров А.П.</span>
+            </div>
+            <div class="pub-title">
+              <a href="https://pa-journal.igsu.ru/en/articles-en/10967" target="_blank" rel="noopener">О методологии стандартизированного аудита в системе регулирования национальных проектов Российской Федерации<span class="ext">↗</span></a>
+            </div>
+            <div class="pub-subtitle">Научная статья · Аудит и контроль</div>
+          </div>
+          <button class="pub-toggle" onclick="togglePub(this)" aria-expanded="false">
+            <span class="toggle-text">Аннотация</span>
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="pub-desc-wrap">
+          <div class="pub-desc-inner">
+            <div class="pub-desc">
+              <p>В статье анализируются проблемы, обусловливающие необходимость качественно нового подхода в системе мониторинга и оценки результатов национальных проектов Российской Федерации, интегрированных с Повесткой ООН в области устойчивого развития, с учетом ограниченных ресурсов. Ввиду отсутствия консенсуса в оценке качества национальных проектов возникает потребность в более информированном стратегическом планировании и контроле на этапе реализации.</p>
+              <p>В условиях ограниченности бюджетных средств особенно важно обеспечить максимальную эффективность реализации национальных проектов, которые напрямую влияют на социально-экономическое развитие страны. Методология аудита (контроля) национальных проектов должна быть всесторонней и охватывать все аспекты их реализации.</p>
+              <p>В рамках совершенствования методологии аудита в Российской Федерации предлагается особый подход — «стандартизированный аудит», который обеспечивает комплексную систему оценки и контроля основных направлений и показателей национальных проектов, являющуюся неотъемлемой частью эффективного управления ресурсами государства.</p>
+              <p>Стандартизация методов оценки способствует прозрачности процесса аудита, создает обоснованные и объективные критерии оценки, которые могут быть закреплены в документах стратегического планирования, что обеспечивает законодательную базу для проведения аудиторских процедур и создает стимул для соблюдения установленных норм и стандартов.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     NEW: BOOKS
+     ============================================================ -->
+<section id="books">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Книги</div>
+    </div>
+
+    <div class="books-grid reveal">
+      <div class="book-cover">
+        <!-- ФОТО КНИГИ: замените "book.jpg" на путь к файлу обложки. Размер плейсхолдера 6×15 см (соотношение 1:2.5). -->
+        <img src="2026-10-09_01-25-06.png" alt="Обложка книги" onerror="this.style.display='none';" />
+        <div class="book-cover-placeholder">
+          <div class="icon">📘</div>
+          <div class="label">Фото обложки<br>книги</div>
+          <div class="size">6 × 8 см</div>
+        </div>
+      </div>
+
+      <div class="book-info">
+        <div class="book-tagline">✦ Новая книга</div>
+        <h3>Как управлять технологиями будущего, не теряя человечности</h3>
+
+        <div class="book-desc">
+          <p>Честная история о том, как управлять технологиями будущего, не теряя человечности. Делюсь опытом, которого не найти в учебниках: как за <strong>90 дней выстроить ИИ-стратегию с нуля</strong>, почему <strong>88% пилотов умирают, не дойдя до продакшена</strong>, и как личный виртуальный совет из <strong>14 гениев</strong> помогает принимать решения.</p>
+          <p>Книга построена вокруг реальных кейсов, ошибок и побед. В ней нет «воды» — только работающие инструменты, живые истории и полезные инсайты. Отдельный раздел посвящён личному бренду, балансу и выгоранию: честно рассказываю о своей системе восстановления.</p>
+          <p>Книга направлена на руководителей уровня <strong>C-level</strong>, тех, кто устал от хайпа и хочет не просто внедрить искусственный интеллект, а переосмыслить бизнес; и всех, кто чувствует, что мир изменился, и хочет измениться вместе с ним.</p>
+        </div>
+
+        <div class="book-highlights">
+          <span class="book-highlight">🎯 C-level руководителям</span>
+          <span class="book-highlight">🤖 ИИ-стратегия за 90 дней</span>
+          <span class="book-highlight">📈 Реальные кейсы</span>
+          <span class="book-highlight">🧠 Баланс и выгорание</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ FOOTER ============ -->
 <footer class="footer" id="contact">
   <div class="container">
@@ -1179,6 +1256,8 @@ section .section-head{margin-top:0}
           <li><a href="#about">→ О себе</a></li>
           <li><a href="#projects">→ Проекты</a></li>
           <li><a href="#method">→ Методология</a></li>
+          <li><a href="#publications">→ Публикации</a></li>
+          <li><a href="#books">→ Книги</a></li>
         </ul>
       </div>
       <div>
@@ -1323,6 +1402,15 @@ function switchTab(plateBtn) {
   if (activePanel) {
     setTimeout(() => initChartsIn(activePanel), 60);
   }
+}
+
+/* ================== NEW: PUBLICATION TOGGLE ================== */
+function togglePub(btn) {
+  const card = btn.closest('.pub-card');
+  const isOpen = card.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+  const txt = btn.querySelector('.toggle-text');
+  if (txt) txt.textContent = isOpen ? 'Свернуть' : 'Аннотация';
 }
 
 /* ================== CHART.JS DEFAULTS ================== */
