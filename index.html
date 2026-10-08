@@ -293,34 +293,40 @@ section .section-head{margin-top:0}
 @media(max-width:900px){.books-grid{grid-template-columns:1fr;gap:30px;padding:28px 22px}}
 .book-cover{
   width: 100%;
-  max-width: 340px;       /* было 240px — увеличили, обложка станет крупной */
-  aspect-ratio: 337 / 600;   /* под вашу обложку; если чуть растянется — попробуйте 10/17 или 3/5 */
+  max-width: 340px;
+  min-height: 300px;     /* запас, если фото не загрузится — покажется плейсхолдер */
   border-radius: 14px;
   background: #fff;
-  border: 1px solid #e6ebf3;
-  display: grid;
-  place-items: center;
-  position: relative;
-  overflow: hidden;
+  border: 1px solid var(--line);
   box-shadow: 0 20px 40px -18px rgba(37,99,235,.35),
               0 8px 16px -10px rgba(124,58,237,.25);
   flex-shrink: 0;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
   @media(max-width:900px){.book-cover{width:100%;max-width:227px}}
 .book-cover img{
   width: 100%;
-  height: 100%;
-  object-fit: contain;    /* вся обложка видна целиком, без обрезки */
+  height: auto;          /* высота = натуральным пропорциям картинки */
   display: block;
+  border-radius: 13px;
+  position: relative;
+  z-index: 2;
+}
+.book-cover-placeholder{
   position: absolute;
   inset: 0;
-  z-index: 2;
-  border-radius: 13px;
-  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
 }
-  .book-cover-placeholder{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:20px;position:relative;z-index:1}
-.book-cover-placeholder .icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#2563eb,#7c3aed);display:grid;place-items:center;color:#fff;font-size:26px;box-shadow:0 10px 22px -10px rgba(37,99,235,.6)}
+  .book-cover-placeholder .icon{width:60px;height:60px;border-radius:16px;background:linear-gradient(135deg,#2563eb,#7c3aed);display:grid;place-items:center;color:#fff;font-size:26px;box-shadow:0 10px 22px -10px rgba(37,99,235,.6)}
 .book-cover-placeholder .label{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);line-height:1.4}
 .book-cover-placeholder .size{font-size:11px;color:var(--muted);font-family:'Manrope';font-weight:600;padding:4px 10px;border-radius:100px;background:rgba(255,255,255,.75);border:1px solid #e0e7ff}
 .book-info{position:relative;z-index:1}
@@ -1262,10 +1268,9 @@ section .section-head{margin-top:0}
         <!-- ФОТО КНИГИ: замените "book.jpg" на путь к файлу обложки. Размер плейсхолдера 6×15 см (соотношение 1:2.5). -->
         <img src="book-cover.png" alt="Обложка книги" onerror="this.style.display='none';" />        
         <div class="book-cover-placeholder">
-          <div class="icon">📘</div>
-          <div class="label">Фото обложки<br>книги</div>
-          <div class="size">12 × 8 см</div>
-        </div>
+  <div class="icon">📘</div>
+  <div class="label">Фото обложки<br>книги</div>
+</div>
       </div>
 
       <div class="book-info">
