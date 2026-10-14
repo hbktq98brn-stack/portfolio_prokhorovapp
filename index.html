@@ -825,3 +825,833 @@ section .section-head{margin-top:0}
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== PROJECT 3 ===== -->
+      <article class="project reveal" id="p3" style="--c1:#e11d48;--c2:#f59e0b">
+        <button class="project-header" onclick="toggleProject(this)" aria-expanded="false">
+          <div class="project-head-main">
+            <span class="project-num">Проект 03</span>
+            <div class="project-title">Восприятие и оценка деятельности Главгосстройнадзора Московской области по защите прав дольщиков</div>
+            <div class="project-meta">
+              <span class="tag">2024–2026</span>
+              <span class="tag">Главгосстройнадзор Московской области</span>
+              <span class="tag">Строительство</span>
+              <span class="tag">Государство</span>
+            </div>
+          </div>
+          <span class="expand-btn">+</span>
+        </button>
+        <div class="project-content-wrap">
+          <div class="project-content">
+            <div class="project-body">
+              <div class="tab-plates">
+                <button class="tab-plate active" data-tab="desc" onclick="switchTab(this)">
+                  <div class="tp-icon">📝</div>
+                  <div class="tp-label">Описание</div>
+                  <div class="tp-hint">Гипотеза, база, метрики</div>
+                </button>
+                <button class="tab-plate" data-tab="analysis" onclick="switchTab(this)">
+                  <div class="tp-icon">📊</div>
+                  <div class="tp-label">Анализ и визуализация</div>
+                  <div class="tp-hint">Графики и соцопросы</div>
+                </button>
+                <button class="tab-plate" data-tab="conclusions" onclick="switchTab(this)">
+                  <div class="tp-icon">💡</div>
+                  <div class="tp-label">Выводы</div>
+                  <div class="tp-hint">Ключевые результаты</div>
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div class="tab-panel active" data-panel="desc">
+                  <div class="project-desc">
+                    <p>Исследование посвящено состоянию сферы долевого строительства в Московской области</p>
+                    <p><span class="highlight">Гипотеза:</span> своевременное выявление объектов с признаками отставания от графика и адресное применение корректирующих мер (финансовых, организационных, административных) позволяет существенно снизить долю МКД со значительным нарушением сроков передачи.</p>
+                    <p><span class="highlight blue">Эмпирическая база:</span> данные ЕИСЖС ДОМ.РФ, проектные декларации и отчётность 161 застройщика, материалы проверок Главгосстройнадзора МО за 2024–2026 гг.</p>
+                  </div>
+                  <div class="metrics">
+                    <div class="metric"><div class="v">2105</div><div class="k">респондентов</div></div>
+                    <div class="metric"><div class="v">483</div><div class="k">объекта долевого строительства</div></div>
+                    <div class="metric"><div class="v">123</div><div class="k">МКД в красной зоне</div></div>
+                  </div>
+                </div>
+
+                <div class="tab-panel" data-panel="analysis">
+                  <div class="charts two">
+                    <div class="chart-card">
+                      <h4>Распределение 123 МКД по зонам риска, %</h4>
+                      <div class="chart-wrap"><canvas id="c3a"></canvas></div>
+                    </div>
+                    <div class="chart-card">
+                      <h4>Соотношение распроданности и стройготовности, МО vs Москва, %</h4>
+                      <div class="chart-wrap"><canvas id="c3b"></canvas></div>
+                    </div>
+                  </div>
+                  <div class="charts" style="margin-top:16px">
+                    <div class="chart-card">
+                      <h4>ТОП-5 ГК по объёму строительства в Московской области, млн м²</h4>
+                      <div class="chart-wrap"><canvas id="c3c"></canvas></div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top:24px">
+                    <div class="surveys-title"><span class="diamond">◆</span>Дополнительные социологические исследования</div>
+                    <div class="surveys-grid">
+                      <div class="survey" style="--c1:#e11d48;--c2:#f59e0b">
+                        <div class="survey-head">
+                          <div class="survey-title">Отношение жителей МО к работе Главгосстройнадзора</div>
+                          <div class="survey-meta">
+                            <span class="survey-badge">N = 850</span>
+                            <span class="survey-badge">МО, 2025</span>
+                            <span class="survey-badge">Онлайн-опрос</span>
+                          </div>
+                        </div>
+                        <div class="survey-question">«Как вы оцениваете работу Главгосстройнадзора Московской области в сфере защиты прав дольщиков?»</div>
+                        <div class="survey-bars">
+                          <div class="bar-row"><span class="bar-label">Положительно</span><div class="bar-track"><div class="bar-fill" style="width:42%;background:linear-gradient(90deg,#10b981,#06b6d4)"></div></div><span class="bar-val">42%</span></div>
+                          <div class="bar-row"><span class="bar-label">Нейтрально</span><div class="bar-track"><div class="bar-fill" style="width:31%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div><span class="bar-val">31%</span></div>
+                          <div class="bar-row"><span class="bar-label">Отрицательно</span><div class="bar-track"><div class="bar-fill" style="width:27%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">27%</span></div>
+                        </div>
+                        <div class="survey-finding"><strong>Ключевой вывод:</strong> относительное большинство жителей МО позитивно оценивают работу надзорного органа, однако более четверти — критично; основной запрос — прозрачность коммуникации по проблемным объектам.</div>
+                      </div>
+
+                      <div class="survey" style="--c1:#f59e0b;--c2:#e11d48">
+                        <div class="survey-head">
+                          <div class="survey-title">Анализ обращений и жалоб дольщиков</div>
+                          <div class="survey-meta">
+                            <span class="survey-badge">N = 1 240</span>
+                            <span class="survey-badge">Обращения, 2024–2025</span>
+                          </div>
+                        </div>
+                        <div class="survey-question">«Структура обращений граждан по объектам долевого строительства МО (по категориям)»</div>
+                        <div class="survey-bars">
+                          <div class="bar-row"><span class="bar-label">Нарушение сроков</span><div class="bar-track"><div class="bar-fill" style="width:44%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div><span class="bar-val">44%</span></div>
+                          <div class="bar-row"><span class="bar-label">Качество работ</span><div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div><span class="bar-val">28%</span></div>
+                          <div class="bar-row"><span class="bar-label">Коммуникация</span><div class="bar-track"><div class="bar-fill" style="width:17%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div><span class="bar-val">17%</span></div>
+                          <div class="bar-row"><span class="bar-label">Прочее</span><div class="bar-track"><div class="bar-fill" style="width:11%;background:linear-gradient(90deg,#f59e0b,#e11d48)"></div></div><span class="bar-val">11%</span></div>
+                        </div>
+                        <div class="survey-finding"><strong>Ключевой вывод:</strong> главная причина обращений — нарушение сроков передачи; работа с качеством и коммуникацией — вторая и третья по значимости зоны для улучшения.</div>
+                      </div>
+
+                      <div class="survey" style="--c1:#2563eb;--c2:#e11d48">
+                        <div class="survey-head">
+                          <div class="survey-title">Экспертный опрос застройщиков МО</div>
+                          <div class="survey-meta">
+                            <span class="survey-badge">N = 15</span>
+                            <span class="survey-badge">Глубинные интервью</span>
+                            <span class="survey-badge">2025</span>
+                          </div>
+                        </div>
+                        <div class="survey-question">«Какие барьеры наиболее сильно влияют на соблюдение сроков ввода объектов?»</div>
+                        <div class="survey-bars">
+                          <div class="bar-row"><span class="bar-label">Дефицит рабочей силы</span><div class="bar-track"><div class="bar-fill" style="width:73%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div><span class="bar-val">73%</span></div>
+                          <div class="bar-row"><span class="bar-label">Стоимость материалов</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div><span class="bar-val">60%</span></div>
+                          <div class="bar-row"><span class="bar-label">Смена подрядчиков</span><div class="bar-track"><div class="bar-fill" style="width:47%;background:linear-gradient(90deg,#2563eb,#e11d48)"></div></div><span class="bar-val">47%</span></div>
+                        </div>
+                        <div class="survey-finding"><strong>Ключевой вывод:</strong> застройщики указывают на дефицит рабочей силы как ключевой барьер; в связке с ростом стоимости материалов это формирует основной риск переноса сроков.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-panel" data-panel="conclusions">
+                  <div class="insights">
+                    <h4>Ключевые выводы</h4>
+                    <ul>
+                      <li>70% МКД находятся в зоне незначительного риска (до 1 мес.), 16% — в зоне риска до 3 месяцев, 14% — в зоне значительного нарушения сроков (от 3 до 8 мес.).</li>
+                      <li>ГК «Самолет» — крупнейший игрок рынка МО; его проекты оказывают значительное влияние на общую статистику.</li>
+                      <li>Основные причины задержек: пересмотр финансовых моделей, смена подрядных организаций, необходимость дополнительного времени на отделку, дефицит рабочей силы.</li>
+                      <li>Жители МО в целом позитивно оценивают работу Главгосстройнадзора, но отмечают необходимость более прозрачной коммуникации по проблемным объектам.</li>
+                      <li>Предложены меры: усиленный мониторинг объектов в зонах повышенного риска, оперативное вмешательство и разработка корректирующих планов.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== PROJECT 4 ===== -->
+      <article class="project reveal" id="p4" style="--c1:#06b6d4;--c2:#10b981">
+        <button class="project-header" onclick="toggleProject(this)" aria-expanded="false">
+          <div class="project-head-main">
+            <span class="project-num">Проект 04</span>
+            <div class="project-title">Оценка финансового обеспечения нацпроекта «Жильё и городская среда» в Московской области</div>
+            <div class="project-meta">
+              <span class="tag">2024–2026</span>
+              <span class="tag">Главгосстройнадзор Московской области</span>
+              <span class="tag">Строительство</span>
+              <span class="tag">Государство</span>
+              <span class="tag">Нацпроекты</span>
+            </div>
+          </div>
+          <span class="expand-btn">+</span>
+        </button>
+        <div class="project-content-wrap">
+          <div class="project-content">
+            <div class="project-body">
+              <div class="tab-plates">
+                <button class="tab-plate active" data-tab="desc" onclick="switchTab(this)">
+                  <div class="tp-icon">📝</div>
+                  <div class="tp-label">Описание</div>
+                  <div class="tp-hint">Гипотеза, база, метрики</div>
+                </button>
+                <button class="tab-plate" data-tab="analysis" onclick="switchTab(this)">
+                  <div class="tp-icon">📊</div>
+                  <div class="tp-label">Анализ и визуализация</div>
+                  <div class="tp-hint">Графики и соцопросы</div>
+                </button>
+                <button class="tab-plate" data-tab="conclusions" onclick="switchTab(this)">
+                  <div class="tp-icon">💡</div>
+                  <div class="tp-label">Выводы</div>
+                  <div class="tp-hint">Ключевые результаты</div>
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <div class="tab-panel active" data-panel="desc">
+                  <div class="project-desc">
+                    <p>Исследование посвящено анализу специфики Московской области в рамках нацпроекта «Жильё и городская среда». Нацпроект рассмотрен не в общероссийском масштабе, а в разрезе одного из ключевых регионов-лидеров по вводу жилья.</p>
+                    <p><span class="highlight">Гипотеза:</span> существующая модель финансового обеспечения нацпроекта в Московской области характеризуется недостаточной ритмичностью кассового исполнения и наличием структурных диспропорций, которые могут быть скорректированы за счёт консолидации субсидий и развития механизмов государственно-частного партнёрства.</p>
+                    <p><span class="highlight blue">Эмпирическая база:</span> данные федерального бюджета и бюджета Московской области, отчёты Казначейства России, материалы ЕИСЖС ДОМ.РФ, статистика Росстата, аналитические материалы Счётной палаты РФ и Главгосстройнадзора МО за 2024–2026 гг.</p>
+                  </div>
+                  <div class="metrics">
+                    <div class="metric"><div class="v">1772</div><div class="k">респондента</div></div>
+                    <div class="metric"><div class="v">5</div><div class="k">федеральных проектов</div></div>
+                    <div class="metric"><div class="v">2</div><div class="k">региональных проекта</div></div>
+                  </div>
+                </div>
+
+                <div class="tab-panel" data-panel="analysis">
+                  <div class="charts two">
+                    <div class="chart-card">
+                      <h4>Ввод жилья в Московской области, млн м²</h4>
+                      <div class="chart-wrap"><canvas id="c4a"></canvas></div>
+                    </div>
+                    <div class="chart-card">
+                      <h4>Структура расходов нацпроекта по федеральным проектам, %</h4>
+                      <div class="chart-wrap"><canvas id="c4b"></canvas></div>
+                    </div>
+                  </div>
+                  <div class="charts" style="margin-top:16px">
+                    <div class="chart-card">
+                      <h4>Ключевые проблемы финансового обеспечения в МО (оценка остроты)</h4>
+                      <div class="chart-wrap"><canvas id="c4c"></canvas></div>
+                    </div>
+                  </div>
+
+                  <div style="margin-top:24px">
+                    <div class="surveys-title"><span class="diamond">◆</span>Дополнительные социологические исследования</div>
+                    <div class="surveys-grid">
+                      <div class="survey" style="--c1:#06b6d4;--c2:#10b981">
+                        <div class="survey-head">
+                          <div class="survey-title">Информированность жителей МО о нацпроекте</div>
+                          <div class="survey-meta">
+                            <span class="survey-badge">N = 1 100</span>
+                            <span class="survey-badge">МО, 2025</span>
+                            <span class="survey-badge">Онлайн-опрос</span>
+                          </div>
+                        </div>
+                        <div class="survey-question">«Насколько вы осведомлены о нацпроекте «Жильё и городская среда» и его мероприятиях в Московской области?»</div>
+                        <div class="survey-bars">
+                          <div class="bar-row"><span class="bar-label">Хорошо знаю</span><div class="bar-track"><div class="bar-fill" style="width:38%;background:linear-gradient(90deg,#06b6d4,#10b981)"></div></div><span class="bar-val">38%</span></div>
+                          <div class="bar-row"><span class="bar-label">Слышал(а)</span><div class="bar-track"><div class="bar-fill" style="width:44%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div><span class="bar-val">44%</span></div>
+                          <div class="bar-row"><span class="bar-label">Не знаю</span><div class="bar-track"><div class="bar-fill" style="width:18%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">18%</span></div>
+                        </div>
+                        <div class="survey-finding"><strong>Ключевой вывод:</strong> уровень базовой информированности высокий (82%), но только 38% знают о нацпроекте содержательно — есть потенциал для усиления коммуникации.</div>
+                      </div>
+
+                      <div class="survey" style="--c1:#10b981;--c2:#06b6d4">
+                        <div class="survey-head">
+                          <div class="survey-title">Восприятие эффективности расходов получателями жилья</div>
+                          <div class="survey-meta">
+                            <span class="survey-badge">N = 650</span>
+                            <span class="survey-badge">Получатели жилья</span>
+                            <span class="survey-badge">2025</span>
+                          </div>
+                        </div>
+                        <div class="survey-question">«Насколько вы удовлетворены качеством реализации программы и сроками?»</div>
+                        <div class="survey-bars">
+                          <div class="bar-row"><span class="bar-label">Удовлетворены</span><div class="bar-track"><div class="bar-fill" style="width:56%;background:linear-gradient(90deg,#10b981,#06b6d4)"></div></div><span class="bar-val">56%</span></div>
+                          <div class="bar-row"><span class="bar-label">Частично</span><div class="bar-track"><div class="bar-fill" style="width:28%;background:linear-gradient(90deg,#94a3b8,#cbd5e1)"></div></div><span class="bar-val">28%</span></div>
+                          <div class="bar-row"><span class="bar-label">Не удовлетворены</span><div class="bar-track"><div class="bar-fill" style="width:16%;background:linear-gradient(90deg,#e11d48,#f59e0b)"></div></div><span class="bar-val">16%</span></div>
+                        </div>
+                        <div class="survey-finding"><strong>Ключевой вывод:</strong> более половины получателей оценивают программу положительно; основные замечания касаются сроков и прозрачности процедур.</div>
+                      </div>
+
+                      <div class="survey" style="--c1:#2563eb;--c2:#10b981">
+                        <div class="survey-head">
+                          <div class="survey-title">Оценка политики Главгосстройнадзора МО экспертами</div>
+                          <div class="survey-meta">
+                            <span class="survey-badge">N = 22</span>
+                            <span class="survey-badge">Эксперт-опрос</span>
+                            <span class="survey-badge">2025–2026</span>
+                          </div>
+                        </div>
+                        <div class="survey-question">«Оцените по 10-балльной шкале ключевые параметры работы надзорного органа»</div>
+                        <div class="survey-bars">
+                          <div class="bar-row"><span class="bar-label">Открытость</span><div class="bar-track"><div class="bar-fill" style="width:72%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div><span class="bar-val">7.2</span></div>
+                          <div class="bar-row"><span class="bar-label">Скорость реакции</span><div class="bar-track"><div class="bar-fill" style="width:76%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div><span class="bar-val">7.6</span></div>
+                          <div class="bar-row"><span class="bar-label">Эффективность мер поддержки</span><div class="bar-track"><div class="bar-fill" style="width:68%;background:linear-gradient(90deg,#2563eb,#10b981)"></div></div><span class="bar-val">6.8</span></div>
+                        </div>
+                        <div class="survey-finding"><strong>Ключевой вывод:</strong> эксперты высоко оценивают оперативность и открытость; наиболее низкая оценка — у эффективности мер поддержки застройщиков, что указывает на зону для совершенствования.</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tab-panel" data-panel="conclusions">
+                  <div class="insights">
+                    <h4>Ключевые выводы</h4>
+                    <ul>
+                      <li>Московская область — один из лидеров по вводу жилья в РФ: 9.3 млн м² в 2024 году, ~11% общероссийского ввода. Однако наблюдается снижение темпов (–9% к 2023 г.).</li>
+                      <li>Соотношение распроданности к стройготовности в МО (75% в 2025 г.) ниже, чем в Москве (95%), что указывает на риск насыщения рынка.</li>
+                      <li>Ключевые проблемы: низкое кассовое исполнение, диспропорции пространственного развития, удорожание строительства, дефицит рабочей силы и высокий износ ЖКХ.</li>
+                      <li>Жители МО в целом информированы о нацпроекте, но хотели бы более наглядных результатов и понятной коммуникации о расходовании средств.</li>
+                      <li>Предложены меры: консолидация субсидий в единый межбюджетный трансферт, развитие эскроу-механизма, стимулирование ИЖС и цифровизация строительной отрасли.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHODOLOGY ============ -->
+<section class="method" id="method">
+  <div class="container">
+    <div class="method-lead reveal">
+      <div class="eyebrow">Методология</div>
+      <p>Как я провожу исследования? Три последовательных этапа, которые обеспечивают валидность данных и практическую применимость результатов.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h4>Дизайн исследования и метрики</h4>
+        <p>Формализация бизнес-задач и определение ключевых метрик (KPI). Проектирование методологии: от разработки инструментария (анкеты, гайды) до построения репрезентативной выборки с учётом социально-демографических факторов, субъектности и поведенческих моделей аудитории.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h4>Сбор и подготовка данных</h4>
+        <p>Проведение количественных и качественных исследований (массовые опросы, экспертные интервью) в регионах России. Консолидация эмпирических данных из информационных систем и цифровых платформ. Обеспечение чистоты, валидности и структурированности массивов данных для дальнейшей обработки.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h4>Анализ и выработка рекомендации</h4>
+        <p>Применение статистических и аналитических методов для поиска скрытых закономерностей и социальных трендов. Построение наглядных визуализаций и дашбордов, подготовка выводов и практических рекомендаций для органов власти и бизнеса на основе полученных инсайтов.</p>
+      </div>
+    </div>
+
+    <div class="tools-block reveal">
+      <h3>Инструменты</h3>
+      <div class="tools">
+        <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">SP</div>SPSS Statistics</div>
+        <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#06b6d4,#2563eb)">Ex</div>Excel / Power Query</div>
+        <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#f59e0b,#e11d48)">Ch</div>Chart.js / Datawrapper</div>
+        <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#10b981,#06b6d4)">GQ</div>Google Forms / Anketolog</div>
+        <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#7c3aed,#e11d48)">ИС</div>ЕИСЖС ДОМ.РФ</div>
+        <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#2563eb,#06b6d4)">РС</div>Росстат / ЕМИСС</div>
+        <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#f59e0b,#e11d48)">BP</div>BPMN</div>
+           <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">BS</div>Business Studio</div>
+        <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#f59e0b,#e11d48)">Sq</div>SQL / Макросы / Формулы</div>
+           <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">Py</div>Python (pandas)</div>
+         <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#7c3aed,#e11d48)">Ya</div>Yandex DataLens</div>
+          <div class="tool"><div class="ico" style="background:linear-gradient(135deg,#10b981,#06b6d4)">Vi</div>Visiology</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PUBLICATIONS
+     ============================================================ -->
+<section id="publications">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Публикации</div>
+    </div>
+
+    <div class="publications-wrap">
+
+      <!-- PUBLICATION 1 -->
+      <article class="pub-card reveal" style="--c1:#2563eb;--c2:#7c3aed">
+        <div class="pub-header">
+          <div class="pub-num">01</div>
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="pub-year">2023</span>
+              <span class="pub-authors">Прохоров А.П.</span>
+            </div>
+            <div class="pub-title">
+              <a href="https://economics.ihbt.ifmo.ru/ru/article/22475/strategicheskoe_stanovlenie_razvivayuschihsya_otrasley_promyshlennosti_rossiyskoy_federacii_s_uchetom_cifrovoy_transformacii,_opredelyayuschey_novuyu_model_ekonomicheskogo_razvitiya.htm" target="_blank" rel="noopener">Стратегическое становление развивающихся отраслей промышленности Российской Федерации с учётом цифровой трансформации, определяющей новую модель экономического развития<span class="ext">↗</span></a>
+            </div>
+            <div class="pub-subtitle">Научная статья · Экономика и управление · Промышленность · Цифровизация</div>
+          </div>
+          <button class="pub-toggle" onclick="togglePub(this)" aria-expanded="false">
+            <span class="toggle-text">Аннотация</span>
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="pub-desc-wrap">
+          <div class="pub-desc-inner">
+            <div class="pub-desc">
+              <p>Рассмотрены аспекты развития стратегических развивающихся отраслей Российской Федерации с учетом цифровой трансформации. Определено, что новый виток научно-технической революции открыл большие возможности для промышленной трансформации и стал новой движущей силой развития национальной экономики. В процессе содействия качественному развитию стратегических развивающихся отраслей цифровая экономика играет важную роль.</p>
+              <p>Целью работы являлся анализ стратегических развивающихся отраслей в условиях возросшей неопределенности во внешней среде, а также серьезной конкуренции за гомогенизацию промышленности между регионами. В качестве объекта исследования выступила новая модель экономического развития Российской Федерации, предложенная Президентом В.В. Путиным, которая исследовалась с применением метода экономического эксперимента.</p>
+              <p>Управляемые инновациями элементы данных играют каталитическую роль, способствуют преобразованию старой и новой модели экономического развития, инновациям и развитию всей цепочки закупок, производства, продаж и обращения, а также порождают экономику новых отраслей, новых форматов и новых бизнес-моделей, интегрируют и высвобождают ценности традиционных факторов производства.</p>
+              <p>С развитием возможностей анализа данных и цифрового инклюзивного финансирования можно решить проблемы информационной асимметрии в традиционном процессе финансирования и сложного процесса кредитования, а также решить проблемы предприятий в стратегических развивающихся отраслях, особенно малых, средних и микропредприятий. Благодаря мониторингу и анализу корпоративных данных можно повысить уровень успешности корпоративных инноваций, что способствует решению проблемы ключевых технологий в промышленной цепочке, позволяя в свою очередь, повысить уровень стабильности и безопасности всей промышленной цепочки и цепочки поставок стратегических развивающихся отраслей промышленности.</p>
+              <p>Конкретный путь реализации цифровой трансформации для стимулирования высококачественного развития стратегических развивающихся отраслей заключается в ускорении создания характерных кластеров и содействии высококачественному совместному развитию между регионами. Необходимо в полной мере использовать преимущества крупных мировых стран и крупных рынков, с целью преодоления порогового значения эффекта экономии за счет масштаба и формировать дифференцированные и выгодные промышленные кластеры.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 2 -->
+      <article class="pub-card reveal" style="--c1:#06b6d4;--c2:#2563eb">
+        <div class="pub-header">
+          <div class="pub-num">02</div>
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-authors">Прохоров А.П., Кашицына Е.Г., Сарибеков Р.К.</span>
+            </div>
+            <div class="pub-title">
+              <a href="https://economics.ihbt.ifmo.ru/en/article/23237/Factors_and_conditions_of_the_new_model_of_economic_development_of_the_Russian_Federation.htm" target="_blank" rel="noopener">Факторы и условия новой модели экономического развития Российской Федерации<span class="ext">↗</span></a>
+            </div>
+            <div class="pub-subtitle">Научная статья · Пространственное развитие · Экономическое развитие</div>
+          </div>
+          <button class="pub-toggle" onclick="togglePub(this)" aria-expanded="false">
+            <span class="toggle-text">Аннотация</span>
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="pub-desc-wrap">
+          <div class="pub-desc-inner">
+            <div class="pub-desc">
+              <p>Актуальность исследования заключается в выявлении факторов и условий обеспечения устойчивого и сбалансированного экономического развития территории Российской Федерации в современных условиях. Целью исследования явилось обсуждение итогов реализации модели пространственного развития страны в наступающем 2025 году, а также подготовка обновленной стратегии развития страны на период до 2030 года, с прогнозом возможных тенденций до 2036 года.</p>
+              <p>Основываясь на данных и аналитических отчетах органов государственной власти (в т.ч. субъектов РФ), теоретическом анализе принципов разработки и методологических подходах по реализации стратегии пространственного развития, в статье предложена новая постановка задач пространственного развития РФ.</p>
+              <p>Мной выделены новые факторы и условия, которые могут способствовать развитию и стать доминантой вырабатываемой стратегии, так и сдерживать его, что требует мер преодоления или нейтрализации негативного влияния. Результаты представленных исследований могут быть полезны при теоретической и практической разработке стратегий развития РФ в будущем.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 3 -->
+      <article class="pub-card reveal" style="--c1:#7c3aed;--c2:#e11d48">
+        <div class="pub-header">
+          <div class="pub-num">03</div>
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-authors">Прохоров А.П.</span>
+            </div>
+            <div class="pub-title">
+              <a href="https://wne.fa.ru/jour/article/view/421/540" target="_blank" rel="noopener">Prospects for the implementation of national projects of the Russian Federation for the period 2025-2030, taking into account the new model of economic development<span class="ext">↗</span></a>
+            </div>
+            <div class="pub-subtitle">Научная статья · Национальные проекты · Экономика и управление</div>
+          </div>
+          <button class="pub-toggle" onclick="togglePub(this)" aria-expanded="false">
+            <span class="toggle-text">Аннотация</span>
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="pub-desc-wrap">
+          <div class="pub-desc-inner">
+            <div class="pub-desc">
+              <p>Актуальность исследования обусловлена продлением реализации национальных проектов Российской Федерации (НП) с учетом новой модели экономического развития страны, предложенной Президентом Российской Федерации В.В. Путиным. Планы развития России на ближайшие годы, включая обеспечение технологического и кадрового суверенитета, развитие инфраструктуры, создание принципиально новых отраслей, требуют обоснованных стратегий и действенных механизмов реализации.</p>
+              <p>Анализ перспективных направлений (новых задач) позволяет обеспечить эффективное достижение поставленных целей в соответствии с требованиями новой экономической модели и вызовами современной глобальной конъюнктуры. Целью данной статьи выступает определение перспектив и приоритетов реализации национальных проектов на период 2025-2030 гг. с учетом новой модели экономического развития Российской Федерации, ориентированной на экономику предложения.</p>
+              <p>Исследование было осуществлено с использованием актуальных данных и аналитических отчетов органов государственной власти, а также теоретического анализа основных принципов и методологических подходов к реализации национальных проектов.</p>
+              <p>Мной, на основе проанализированных данных, предложен ориентировочный перечень новых (переформатированных) проектов цикла 2025-2030 гг.</p>
+              <p>В статье обосновал новые задачи, которые необходимо решить в рамках продления реализации национальных проектов. По моему мнению, нацпроекты должны быть дополнены прорывными мероприятиями, нацеленными на существенный прирост добавленной стоимости, качественный рост доходной части бюджетов всех уровней, масштабное привлечение инвестиционного ресурса, создание новых высокопроизводительных рабочих мест.</p>
+              <p>Результаты и выводы статьи могут быть полезны для принимающих решения о разработке и реализации политики развития страны, для проектных офисов органов власти.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PUBLICATION 4 -->
+      <article class="pub-card reveal" style="--c1:#f59e0b;--c2:#e11d48">
+        <div class="pub-header">
+          <div class="pub-num">04</div>
+          <div class="pub-main">
+            <div class="pub-meta">
+              <span class="pub-year">2024</span>
+              <span class="pub-authors">Прохоров А.П.</span>
+            </div>
+            <div class="pub-title">
+              <a href="https://pa-journal.igsu.ru/en/articles-en/10967" target="_blank" rel="noopener">О методологии стандартизированного аудита в системе регулирования национальных проектов Российской Федерации<span class="ext">↗</span></a>
+            </div>
+            <div class="pub-subtitle">Научная статья · Аудит и контроль · Национальные проекты</div>
+          </div>
+          <button class="pub-toggle" onclick="togglePub(this)" aria-expanded="false">
+            <span class="toggle-text">Аннотация</span>
+            <span class="arrow">▼</span>
+          </button>
+        </div>
+        <div class="pub-desc-wrap">
+          <div class="pub-desc-inner">
+            <div class="pub-desc">
+              <p>В статье проанализированы проблемы, обусловливающие необходимость качественно нового подхода в системе мониторинга и оценки результатов национальных проектов Российской Федерации, интегрированных с Повесткой ООН в области устойчивого развития, с учетом ограниченных ресурсов. Ввиду отсутствия консенсуса в оценке качества национальных проектов возникает потребность в более информированном стратегическом планировании и контроле на этапе реализации.</p>
+              <p>В условиях ограниченности бюджетных средств особенно важно обеспечить максимальную эффективность реализации национальных проектов, которые напрямую влияют на социально-экономическое развитие страны. Методология аудита (контроля) национальных проектов должна быть всесторонней и охватывать все аспекты их реализации.</p>
+              <p>В рамках совершенствования методологии аудита в Российской Федерации предлагается особый подход — «стандартизированный аудит», который обеспечивает комплексную систему оценки и контроля основных направлений и показателей национальных проектов, являющуюся неотъемлемой частью эффективного управления ресурсами государства.</p>
+              <p>Стандартизация методов оценки способствует прозрачности процесса аудита, создает обоснованные и объективные критерии оценки, которые могут быть закреплены в документах стратегического планирования, что обеспечивает законодательную базу для проведения аудиторских процедур и создает стимул для соблюдения установленных норм и стандартов.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BOOKS
+     ============================================================ -->
+<section id="books">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Книги</div>
+    </div>
+
+    <div class="books-scroll">
+
+      <!-- КНИГА 1 -->
+      <div class="books-grid reveal">
+        <div class="book-cover">
+          <img src="book-cover.png" alt="Обложка книги" onerror="this.style.display='none';" />
+          <div class="book-cover-placeholder">
+            <div class="icon">📘</div>
+            <div class="label">Фото обложки<br>книги</div>
+          </div>
+        </div>
+
+        <div class="book-info">
+          <div class="book-tagline">✦ Новая книга</div>
+          <h3>Как управлять технологиями будущего, не теряя человечности</h3>
+
+          <div class="book-desc">
+            <p>Честная история о том, как управлять технологиями будущего, не теряя человечности. Делюсь опытом, которого не найти в учебниках: как за <strong>90 дней выстроить ИИ-стратегию с нуля</strong>, почему <strong>88% пилотов умирают, не дойдя до продакшена</strong>, и как личный виртуальный совет из <strong>14 гениев</strong> помогает принимать решения.</p>
+            <p>Книга построена вокруг реальных кейсов, ошибок и побед. В ней нет «воды» — только работающие инструменты, живые истории и полезные инсайты. Отдельный раздел посвящён личному бренду, балансу и выгоранию: честно рассказываю о своей системе восстановления.</p>
+            <p>Книга направлена на руководителей уровня <strong>C-level</strong>, тех, кто устал от хайпа и хочет не просто внедрить искусственный интеллект, а переосмыслить бизнес; и всех, кто чувствует, что мир изменился, и хочет измениться вместе с ним.</p>
+          </div>
+
+          <div class="book-highlights">
+            <span class="book-highlight">C-level руководителям</span>
+            <span class="book-highlight">ИИ-стратегия за 90 дней</span>
+            <span class="book-highlight">Реальные кейсы</span>
+            <span class="book-highlight">Баланс и выгорание</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- КНИГА 2 -->
+      <div class="books-grid reveal">
+        <div class="book-cover">
+          <img src="book2.jpg" alt="Обложка книги «Архитектор ценности»" onerror="this.style.display='none';" />
+          <div class="book-cover-placeholder">
+            <div class="icon">📗</div>
+            <div class="label">Фото обложки<br>книги</div>
+          </div>
+        </div>
+
+        <div class="book-info">
+          <div class="book-tagline">✦ Новый гайд</div>
+          <h3>
+            <a href="https://max.ru/alproailife/AaE437uWHns" target="_blank" rel="noopener" class="book-title-link">
+              Архитектор ценности. Практический гайд по управлению ИИ для C-level<span class="ext">↗</span>
+            </a>
+          </h3>
+
+          <div class="book-desc">
+            <p>Искусственный интеллект стал операционной системой бизнеса. Но за фасадом хайпа — жёсткая статистика: <strong>95% пилотов GenAI не дают измеримого эффекта</strong>, <strong>42% компаний забросили большинство ИИ-инициатив</strong>. Проблема не в технологиях — в подходе.</p>
+            <p>Гайд — рабочая карта для руководителя, который хочет пройти путь от «давайте попробуем» до «это приносит деньги». Внутри: <strong>первые 90 дней CAIO</strong>, экосистема инструментов, три кита безопасности, борьба с алгоритмической предвзятостью, ответственный ИИ и человечность как главный актив лидера.</p>
+          </div>
+
+          <div class="book-highlights">
+            <span class="book-highlight">C-level руководителям</span>
+            <span class="book-highlight">Первые 90 дней CAIO</span>
+            <span class="book-highlight">Три кита безопасности</span>
+            <span class="book-highlight">Ответственный ИИ</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /.books-scroll -->
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-big">Прохоров Алексей Павлович</div>
+        <p>Помогаю принимать решения на основе данных: от разработки исследования до визуализации и рекомендаций.</p>
+      </div>
+      <div>
+        <h4>Навигация</h4>
+        <ul class="footer-links">
+          <li><a href="#about">→ Обо мне</a></li>
+          <li><a href="#projects">→ Проекты</a></li>
+          <li><a href="#method">→ Методология</a></li>
+          <li><a href="#publications">→ Публикации</a></li>
+          <li><a href="#books">→ Книги</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a class="contact-row" href="mailto:alprominec2024@yandex.ru">
+          <div class="ci">@</div> alprominec2024@yandex.ru
+        </a>
+        <a class="contact-row" href="tel:+79856997043">
+          <div class="ci">☎</div> +7 (985) 699-70-43
+        </a>
+        <a class="contact-row" href="https://max.ru/u/f9LHodD0cOLpujcasZVUcDRIItxDJ61Ea1FFNYOmL4nQMKrbQTa4Cd-GiIg" target="_blank" rel="noopener">
+          <div class="ci">M</div> Написать в МАКС
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2023-2026 Прохоров Алексей Павлович. Руководитель аналитических (социологических) проектов.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CONTACT MODAL ============ -->
+<div class="modal-overlay" id="contactModal" onclick="if(event.target===this)closeContact()">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" onclick="closeContact()" aria-label="Закрыть">×</button>
+    <h3 id="modalTitle">Связаться со мной</h3>
+    <p class="modal-sub">Выберите удобный способ связи — откроется нужное приложение</p>
+
+    <div class="contact-options">
+      <a class="contact-item" href="mailto:alprominec2024@yandex.ru">
+        <div class="ci-big" style="background:linear-gradient(135deg,#2563eb,#7c3aed)">@</div>
+        <div class="ci-info">
+          <div class="ci-label">Email</div>
+          <div class="ci-value">alprominec2024@yandex.ru</div>
+        </div>
+        <div class="ci-arrow">→</div>
+      </a>
+
+      <a class="contact-item" href="tel:+79856997043">
+        <div class="ci-big" style="background:linear-gradient(135deg,#10b981,#06b6d4)">☎</div>
+        <div class="ci-info">
+          <div class="ci-label">Телефон</div>
+          <div class="ci-value">+7 (985) 699-70-43</div>
+        </div>
+        <div class="ci-arrow">→</div>
+      </a>
+
+      <a class="contact-item" href="https://max.ru/u/f9LHodD0cOLpujcasZVUcDRIItxDJ61Ea1FFNYOmL4nQMKrbQTa4Cd-GiIg" target="_blank" rel="noopener">
+        <div class="ci-big" style="background:linear-gradient(135deg,#7c3aed,#e11d48)">M</div>
+        <div class="ci-info">
+          <div class="ci-label">Мессенджер МАКС</div>
+          <div class="ci-value">Открыть чат</div>
+        </div>
+        <div class="ci-arrow">→</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================== REVEAL ================== */
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ================== COUNTERS ================== */
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const el = e.target;
+      const target = parseFloat(el.dataset.count);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1600;
+      const start = performance.now();
+      function update(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val = Math.round(target * eased);
+        el.textContent = val.toLocaleString('ru-RU') + suffix;
+        if (p < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+/* ================== NAV SHADOW ================== */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = window.scrollY > 30
+    ? '0 10px 30px -10px rgba(11,18,32,.12)'
+    : 'var(--shadow-sm)';
+});
+
+/* ================== CONTACT MODAL ================== */
+function openContact() {
+  document.getElementById('contactModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeContact() {
+  document.getElementById('contactModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeContact();
+});
+
+/* ================== PROJECT ACCORDION ================== */
+function toggleProject(btn) {
+  const project = btn.closest('.project');
+  const isOpen = project.classList.contains('open');
+  project.classList.toggle('open');
+  btn.setAttribute('aria-expanded', !isOpen);
+
+  if (!isOpen) {
+    setTimeout(() => {
+      const activePanel = project.querySelector('.tab-panel.active');
+      if (activePanel) initChartsIn(activePanel);
+    }, 520);
+  }
+}
+
+/* ================== TABS ================== */
+function switchTab(plateBtn) {
+  const plateContainer = plateBtn.closest('.tab-plates');
+  const body = plateContainer.closest('.project-body');
+  const target = plateBtn.dataset.tab;
+
+  plateContainer.querySelectorAll('.tab-plate').forEach(p => p.classList.remove('active'));
+  plateBtn.classList.add('active');
+
+  body.querySelectorAll('.tab-panel').forEach(p => {
+    p.classList.toggle('active', p.dataset.panel === target);
+  });
+
+  const activePanel = body.querySelector('.tab-panel.active');
+  if (activePanel) {
+    setTimeout(() => initChartsIn(activePanel), 60);
+  }
+}
+
+/* ================== PUBLICATION TOGGLE ================== */
+function togglePub(btn) {
+  const card = btn.closest('.pub-card');
+  const isOpen = card.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen);
+  const txt = btn.querySelector('.toggle-text');
+  if (txt) txt.textContent = isOpen ? 'Свернуть' : 'Аннотация';
+}
+
+/* ================== CHART.JS DEFAULTS ================== */
+Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.color = '#64748b';
+Chart.defaults.plugins.legend.labels.usePointStyle = true;
+Chart.defaults.plugins.legend.labels.boxWidth = 8;
+Chart.defaults.plugins.legend.labels.padding = 14;
+Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(11,18,32,.92)';
+Chart.defaults.plugins.tooltip.padding = 12;
+Chart.defaults.plugins.tooltip.cornerRadius = 10;
+Chart.defaults.plugins.tooltip.titleFont = { weight: '700', size: 12 };
+Chart.defaults.plugins.tooltip.bodyFont = { size: 12 };
+Chart.defaults.maintainAspectRatio = false;
+
+const palette = { blue:'#2563eb', violet:'#7c3aed', cyan:'#06b6d4', amber:'#f59e0b', rose:'#e11d48', emerald:'#10b981', slate:'#94a3b8' };
+const gridStyle = { color:'#eef2f8', drawBorder:false };
+const axisStyle = { grid:gridStyle, border:{display:false}, ticks:{ color:'#64748b' } };
+
+const configs = {
+  c1a: { type:'doughnut', data:{ labels:['Готовы','Не готовы','Затруднились'], datasets:[{ data:[33,47,20], backgroundColor:[palette.blue,'#f97316',palette.slate], borderWidth:0, hoverOffset:6 }] },
+    options:{ cutout:'68%', plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}} } } },
+  c1b: { type:'bar', data:{ labels:['Жёсткое давление','Компромисс','Уход от конфликта','Прекращение'], datasets:[{ data:[40,27,24,9], backgroundColor:[palette.blue,'#f97316',palette.slate,'#ef4444'], borderRadius:8, barThickness:34 }] },
+    options:{ indexAxis:'y', plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.parsed.x}%`}}}, scales:{ x:{...axisStyle,max:50,ticks:{callback:v=>v+'%'}}, y:{grid:{display:false},border:{display:false}} } } },
+  c1c: { type:'bar', data:{ labels:['Здравоохранение','Жильё','Образование','Экология','Автодороги','Культура','Производительность','Наука','МСП','Демография','Цифровая экономика','Экспорт'],
+      datasets:[{ data:[60,51,51,49,45,41,40,37,36,36,28,28], backgroundColor:(ctx)=>{ const v=ctx.raw; if(v>=50)return palette.blue; if(v>=40)return palette.violet; if(v>=30)return palette.cyan; return palette.slate; }, borderRadius:8, barThickness:18 }] },
+    options:{ indexAxis:'y', plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.parsed.x}%`}}}, scales:{ x:{...axisStyle,max:70,ticks:{callback:v=>v+'%'}}, y:{grid:{display:false},border:{display:false}} } } },
+  c2a: { type:'bar', data:{ labels:['Рост выручки','Рост доли рынка','Производственная мощность'], datasets:[{ data:[10,5,15], backgroundColor:[palette.violet,palette.blue,palette.cyan], borderRadius:10, barThickness:42 }] },
+    options:{ plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>{const v=c.parsed.y; return v===15?' +15 млн тонн в год':` +${v}%`;}}}}, scales:{ y:{...axisStyle,beginAtZero:true,max:18}, x:{grid:{display:false},border:{display:false}} } } },
+  c2b: { type:'radar', data:{ labels:['Партнёрство с наукой','Защита ИС','Научно-тех. потенциал','Учёт НТП','Информационные ресурсы'], datasets:[{ data:[85,75,70,60,80], backgroundColor:'rgba(124,58,237,.15)', borderColor:palette.violet, borderWidth:2, pointBackgroundColor:palette.violet, pointRadius:4 }] },
+    options:{ plugins:{legend:{display:false}}, scales:{ r:{ beginAtZero:true,max:100, grid:{color:'#eef2f8'}, angleLines:{color:'#eef2f8'}, pointLabels:{font:{size:11},color:'#64748b'}, ticks:{display:false} } } } },
+  c3a: { type:'doughnut', data:{ labels:['До 1 мес. (86 МКД)','До 3 мес. (19 МКД)','3–8 мес. (18 МКД)'], datasets:[{ data:[86,19,18], backgroundColor:['#86efac',palette.amber,palette.rose], borderWidth:0, hoverOffset:8 }] },
+    options:{ cutout:'65%', plugins:{ legend:{position:'bottom'}, tooltip:{callbacks:{label:c=>{const total=c.dataset.data.reduce((a,b)=>a+b,0); const p=((c.parsed/total)*100).toFixed(0); return ` ${c.label}: ${p}%`;}}} } } },
+  c3b: { type:'line', data:{ labels:['2024','2025'], datasets:[
+      { label:'Московская область', data:[78,75], borderColor:palette.amber, backgroundColor:'rgba(245,158,11,.10)', borderWidth:3, tension:.35, fill:true, pointBackgroundColor:palette.amber, pointRadius:5 },
+      { label:'Москва', data:[93,95], borderColor:palette.blue, backgroundColor:'rgba(37,99,235,.10)', borderWidth:3, tension:.35, fill:true, pointBackgroundColor:palette.blue, pointRadius:5 } ] },
+    options:{ plugins:{legend:{position:'bottom'}, tooltip:{callbacks:{label:c=>` ${c.dataset.label}: ${c.parsed.y}%`}}}, scales:{ y:{...axisStyle,min:60,max:100,ticks:{callback:v=>v+'%'}}, x:{grid:{display:false},border:{display:false}} } } },
+  c3c: { type:'bar', data:{ labels:['Самолет (18%)','ПИК (10%)','ФСК (8%)','Гранель (6%)','Sminex (4%)'], datasets:[{ data:[2.2,0.86,0.66,0.54,0.32], backgroundColor:[palette.rose,palette.blue,palette.violet,palette.cyan,palette.amber], borderRadius:8, barThickness:36 }] },
+    options:{ plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.parsed.y} млн м²`}}}, scales:{ y:{...axisStyle,beginAtZero:true,ticks:{callback:v=>v+' млн'}}, x:{grid:{display:false},border:{display:false}} } } },
+  c4a: { type:'line', data:{ labels:['2020','2021','2022','2023','2024','2025'], datasets:[{ label:'Ввод жилья в МО, млн м²', data:[8.72,9.1,9.0,10.2,9.3,8.5], borderColor:palette.cyan, backgroundColor:'rgba(6,182,212,.12)', borderWidth:3, tension:.35, fill:true, pointBackgroundColor:palette.cyan, pointRadius:5, pointHoverRadius:7 }] },
+    options:{ plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.parsed.y} млн м²`}}}, scales:{ y:{...axisStyle,beginAtZero:false,min:7,max:11,ticks:{callback:v=>v+' млн'}}, x:{grid:{display:false},border:{display:false}} } } },
+  c4b: { type:'polarArea', data:{ labels:['Жильё','Комфортная городская среда','Расселение аварийного фонда','Чистая вода','Ипотека'],
+      datasets:[{ data:[30,22,28,15,5], backgroundColor:['rgba(37,99,235,.75)','rgba(16,185,129,.75)','rgba(245,158,11,.75)','rgba(6,182,212,.75)','rgba(124,58,237,.75)'], borderWidth:0 }] },
+    options:{ plugins:{legend:{position:'bottom'}, tooltip:{callbacks:{label:c=>` ${c.label}: ${c.parsed}%`}}}, scales:{ r:{ grid:{color:'#eef2f8'}, ticks:{display:false}, pointLabels:{font:{size:10}} } } } },
+  c4c: { type:'bar', data:{ labels:['Низкое кассовое исполнение','Удорожание строительства','Дефицит рабочей силы','Диспропорции развития','Износ ЖКХ'],
+      datasets:[{ data:[75,85,70,80,65], backgroundColor:[palette.blue,palette.rose,palette.amber,palette.violet,palette.cyan], borderRadius:8, barThickness:30 }] },
+    options:{ indexAxis:'y', plugins:{legend:{display:false}, tooltip:{callbacks:{label:c=>` Острота: ${c.parsed.x}/100`}}}, scales:{ x:{...axisStyle,max:100}, y:{grid:{display:false},border:{display:false}} } } }
+};
+
+/* ================== CHART INIT ================== */
+function initChartsIn(container) {
+  container.querySelectorAll('canvas').forEach(c => {
+    if (!configs[c.id]) return;
+    if (!c.dataset.charted) {
+      const rect = c.getBoundingClientRect();
+      if (rect.width > 0 && rect.height > 0) {
+        new Chart(c, configs[c.id]);
+        c.dataset.charted = '1';
+      }
+    } else {
+      const chart = Chart.getChart(c);
+      if (chart) chart.resize();
+    }
+  });
+}
+
+/* ================== SMOOTH ANCHORS ================== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href');
+    if (id.length > 1) {
+      const el = document.querySelector(id);
+      if (el) {
+        e.preventDefault();
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 90;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  });
+});
+
+/* ================== RESIZE CHARTS ================== */
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.querySelectorAll('canvas').forEach(c => {
+      const chart = Chart.getChart(c);
+      if (chart) chart.resize();
+    });
+  }, 200);
+});
+</script>
+</body>
+</html>
